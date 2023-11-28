@@ -102,10 +102,10 @@ header .menu {
   margin-bottom: 40px;
 }
 
-.banner button {
+.banner a {
   font-size: 20px;
   background-color: transparent;
-  border: 1px solid;
+  border: 1px solid beige;
   color: beige;
   width: fit-content;
   padding: 16px 32px;
@@ -116,7 +116,7 @@ header .menu {
   cursor: pointer;
 }
 
-.banner button:hover {
+.banner a:hover {
   background-color: beige;
   color: black;
 }
