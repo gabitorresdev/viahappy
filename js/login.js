@@ -6,7 +6,7 @@ const usuarios = JSON.parse(localStorage.getItem(claveLocalStorge) || '[]');
 const usuario = localStorage.getItem('usuario');
 
 if (usuario !== null) {
-    window.location = '/index.html';
+    window.location = './';
 }
 
 formulario.addEventListener('submit', (e) => {
@@ -20,7 +20,7 @@ formulario.addEventListener('submit', (e) => {
         for (const usuario of usuarios) {
             if (usuario.email === datos.email && usuario.contrasena === datos.contrasena) {
                 localStorage.setItem('usuario', JSON.stringify(usuario))
-                window.location = '/index.html'
+                window.location = './'
                 return;
             }
         }

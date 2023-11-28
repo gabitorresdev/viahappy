@@ -6,7 +6,7 @@ const usuarios = JSON.parse(localStorage.getItem(claveLocalStorge) || '[]');
 const usuario = localStorage.getItem('usuario');
 
 if (usuario !== null) {
-    window.location = '/index.html';
+    window.location = './';
 }
 
 
@@ -29,5 +29,5 @@ formulario.addEventListener('submit', (e) => {
     usuarios.push(datos);
     localStorage.setItem(claveLocalStorge, JSON.stringify(usuarios));
     window.alert('Usuario registrado.')
-    window.location = '/login.html';
+    window.location = 'login';
 })

@@ -10,6 +10,6 @@ if (usuario) {
 
     document.querySelector('#cerrar-sesion').addEventListener('click', () => {
         localStorage.removeItem('usuario');
-        window.location = '/index.html';
+        window.location = './';
     })
 }
