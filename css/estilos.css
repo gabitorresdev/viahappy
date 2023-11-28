@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap");
+
+/* Resetear estilos por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  height: 75vh;
+  position: relative;
+  background-image: url("../img/fondo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  color: beige;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+header .menu,
+header .banner {
+  position: relative;
+  z-index: 1;
+}
+
+header .menu {
+  height: 80px;
+  padding: 20px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu img {
+  width: 160px;
+}
+
+.menu nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu nav li {
+  padding: 8px;
+}
+
+.menu nav a {
+  text-decoration: none;
+  color: beige;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 80px;
+  margin-bottom: 16px;
+  color: #e4db08;
+}
+
+.banner .descripcion {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.banner button {
+  font-size: 20px;
+  background-color: transparent;
+  border: 1px solid;
+  color: beige;
+  width: fit-content;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.banner button:hover {
+  background-color: beige;
+  color: black;
+}
+
+section {
+  margin: 80px 120px;
+}
+
+section h2 {
+  font-size: 48px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+section#sobre-nosotros > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 16px;
+}
+
+section#sobre-nosotros p {
+  font-size: 24px;
+  margin-right: 40px;
+}
+
+section#sobre-nosotros .imagenes {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section#sobre-nosotros .imagenes img {
+  width: 260px;
+  margin: 8px;
+}
+
+.planes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 16px;
+}
+
+.planes .plan {
+  width: 320px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+  padding: 16px;
+  /* background-color: red; */
+}
+
+.planes .plan h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.planes .plan .precio {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.planes .plan .precio span {
+  font-size: 16px;
+  display: block;
+}
+
+footer {
+  height: 100vh;
+}
