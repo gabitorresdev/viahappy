@@ -29,8 +29,8 @@ header {
 
 .formulario input[type="submit"] {
   width: 100%;
-  background-color: #4caf50;
-  color: white;
+  background-color: #e0dd28;
+  color: black;
   padding: 14px 20px;
   margin: 16px 0;
   border: none;
@@ -39,5 +39,5 @@ header {
 }
 
 .formulario input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: rgb(208, 202, 38);
 }
