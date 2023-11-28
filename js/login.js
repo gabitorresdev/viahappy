@@ -18,7 +18,7 @@ formulario.addEventListener('submit', (e) => {
 
     if (usuarios?.length) {
         for (const usuario of usuarios) {
-            if (usuario.email === datos.email && usuario.password === datos.password) {
+            if (usuario.email === datos.email && usuario.contrasena === datos.contrasena) {
                 localStorage.setItem('usuario', JSON.stringify(usuario))
                 window.location = '/index.html'
                 return;
@@ -26,5 +26,5 @@ formulario.addEventListener('submit', (e) => {
         }
     }
 
-    console.error('Correo o contraseña erróneos')
+    window.alert('Correo o contraseña erróneos.')
 });

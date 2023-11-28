@@ -19,8 +19,8 @@ formulario.addEventListener('submit', (e) => {
 
     if (usuarios?.length) {
         for (const usuario of usuarios) {
-            console.log(usuario.email, datos.email);
             if (usuario.email === datos.email) {
+                window.alert('Este email ya está registrado.')
                 return;
             }
         }
@@ -28,6 +28,6 @@ formulario.addEventListener('submit', (e) => {
 
     usuarios.push(datos);
     localStorage.setItem(claveLocalStorge, JSON.stringify(usuarios));
-    console.log('Usuario registrado');
-    window.location('/login');
+    window.alert('Usuario registrado.')
+    window.location = '/login.html';
 })
