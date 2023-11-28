@@ -15,7 +15,7 @@ body {
   height: 100%;
 }
 
-button {
+button:not(.no-style) {
   font-size: 20px;
   background-color: transparent;
   border: 1px solid;
@@ -75,9 +75,12 @@ header .menu {
   padding: 8px;
 }
 
-.menu nav a {
+.menu nav a, .menu nav button {
   text-decoration: none;
   color: beige;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .banner {
@@ -331,3 +334,7 @@ footer .redes-sociales img {
     padding: 80px;
   }
 }
+
+.ocultar {
+  display: none !important;
+} 

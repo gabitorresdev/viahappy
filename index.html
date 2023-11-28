@@ -16,10 +16,14 @@
                 <img src="./img/viahappy-logo.svg" alt="Viahappy Logo">
             </div>
             <nav>
-                <ul>
+                <ul class="no-usuario">
                     <li><a href="/">Inicio</a></li>
                     <li><a href="/registrarse.html">Registrase</a></li>
                     <li><a href="/login.html">Login</a></li>
+                </ul>
+                <ul class="con-usuario ocultar">
+                    <li>Hola <span id="usuario-nombre"></span>!</li>
+                    <li><button id="cerrar-sesion" class="no-style">| Cerrar Sesion</button></li>
                 </ul>
             </nav>
         </div>
@@ -118,6 +122,7 @@
         </div>
     </footer>
 
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
