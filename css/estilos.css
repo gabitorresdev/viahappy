@@ -56,10 +56,10 @@ header .banner {
 
 header .menu {
   height: 80px;
-  padding: 20px 80px;
+  padding: 20px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .menu img {
@@ -84,12 +84,12 @@ header .menu {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding-top: 100px;
+  padding-top: 80px;
   text-align: center;
 }
 
 .banner h1 {
-  font-size: 80px;
+  font-size: 50px;
   margin-bottom: 16px;
   color: #e4db08;
 }
@@ -271,12 +271,8 @@ section#sobre-nosotros .imagenes img {
 footer {
   display: flex;
   justify-content: space-between;
-  padding: 80px;
+  padding: 24px;
   border-top: 1px solid lightgray;
-}
-
-footer p {
-  font-size: 24px;
 }
 
 footer .redes-sociales {
@@ -295,9 +291,19 @@ footer .redes-sociales img {
 }
 
 @media screen and (min-width: 481px) {
-  html {
-    max-width: 100vh;
-    overflow-x: hidden;
+
+  header .menu {
+    padding: 20px 80px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .banner {
+    padding-top: 100px;
+  }
+  
+  .banner h1 {
+    font-size: 80px;
   }
 
   section {
@@ -319,5 +325,9 @@ footer .redes-sociales img {
 
   .planes .plan {
     width: 280px;
+  }
+
+  footer {
+    padding: 80px;
   }
 }
