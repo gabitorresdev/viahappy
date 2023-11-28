@@ -9,6 +9,24 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html,
+body {
+  width: 100vw;
+  height: 100%;
+}
+
+button {
+  font-size: 20px;
+  background-color: transparent;
+  border: 1px solid;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
 header {
   height: 75vh;
   position: relative;
@@ -101,7 +119,7 @@ header .menu {
 }
 
 section {
-  margin: 80px 120px;
+  margin: 80px 24px;
 }
 
 section h2 {
@@ -112,7 +130,7 @@ section h2 {
 
 section#sobre-nosotros > div {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-column-gap: 16px;
 }
 
@@ -122,44 +140,45 @@ section#sobre-nosotros p {
 }
 
 section#sobre-nosotros .imagenes {
-  /* display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 16px;
-  grid-row-gap: 16px; */
   display: flex;
   flex-wrap: wrap;
 }
 
 section#sobre-nosotros .imagenes img {
-  width: 260px;
-  margin: 8px;
+  width: 100%;
+  margin: 16px 0;
 }
 
 .planes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .planes .plan {
-  width: 320px;
+  width: 100%;
+  margin: 16px;
+  height: auto;
   text-align: center;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
-  padding: 16px;
-  /* background-color: red; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  background-color: rgb(254, 253, 247);
+  display: flex;
+  flex-direction: column;
 }
 
 .planes .plan h3 {
   font-size: 28px;
-  margin-bottom: 16px;
+  margin-bottom: 28px;
+  margin-top: 12px;
 }
 
 .planes .plan .precio {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   margin-bottom: 24px;
+  color: rgb(120, 125, 14);
 }
 
 .planes .plan .precio span {
@@ -167,6 +186,138 @@ section#sobre-nosotros .imagenes img {
   display: block;
 }
 
+.planes .plan p {
+  padding-bottom: 12px;
+}
+
+.planes .plan button {
+  margin-top: auto;
+  width: 100%;
+}
+
+.comentarios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.comentario {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: #9e9e9e;
+  display: inline-block;
+  font-size: 16px;
+  margin: 35px 10px 10px;
+  max-width: 310px;
+  min-width: 250px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-top: 5px solid #d2652d;
+}
+
+.comentario *,
+.comentario *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.comentario figcaption {
+  padding: 13% 10% 12%;
+}
+
+.comentario figcaption:before {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #d2652d;
+  content: '‟';
+  font-size: 80px;
+  height: 60px;
+  vertical-align: middle;
+  left: 50%;
+  line-height: normal;
+  position: absolute;
+  top: -30px;
+  width: 60px;
+}
+
+.comentario h3 {
+  color: #3c3c3c;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 10px 0 5px;
+}
+
+.comentario h4 {
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.comentario blockquote {
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+
 footer {
-  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  border-top: 1px solid lightgray;
+}
+
+footer p {
+  font-size: 24px;
+}
+
+footer .redes-sociales {
+  display: flex;
+}
+
+
+footer .redes-sociales a {
+  width: 36px;
+  height: 36px;
+}
+
+footer .redes-sociales img {
+  width: 36px;
+  height: 36px;
+}
+
+@media screen and (min-width: 481px) {
+  html {
+    max-width: 100vh;
+    overflow-x: hidden;
+  }
+
+  section {
+    margin: 80px 120px;
+    min-height: 70vh;
+  }
+
+  section#sobre-nosotros > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 16px;
+  }
+
+  section#sobre-nosotros .imagenes img {
+    max-width: 280px;
+    width: auto;
+    margin: 12px;
+  }
+
+  .planes .plan {
+    width: 280px;
+  }
 }
